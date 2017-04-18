@@ -1,0 +1,55 @@
+<PISI>
+    <Source>
+        <Name>libzhuyin</Name>
+        <Packager>
+            <Name>Bryan T. Meyers</Name>
+            <Email>bmeyers@datadrake.com</Email>
+        </Packager>
+        <License>GPL-2.0</License>
+        <PartOf>desktop.library</PartOf>
+        <Summary xml:lang="en">Library to deal with zhuyin.</Summary>
+        <Description xml:lang="en">The libzhuyin project aims to provide the algorithms core for intelligent sentence-based Chinese zhuyin input methods.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>libzhuyin</Name>
+        <Summary xml:lang="en">Library to deal with zhuyin.</Summary>
+        <Description xml:lang="en">The libzhuyin project aims to provide the algorithms core for intelligent sentence-based Chinese zhuyin input methods.
+</Description>
+        <PartOf>desktop.library</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib64/libzhuyin/data/bigram.db</Path>
+            <Path fileType="library">/usr/lib64/libzhuyin/data/phrase_index.bin</Path>
+            <Path fileType="library">/usr/lib64/libzhuyin/data/pinyin_index.bin</Path>
+            <Path fileType="library">/usr/lib64/libzhuyin/data/table.conf</Path>
+            <Path fileType="library">/usr/lib64/libzhuyin/data/tsi.bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libzhuyin-devel</Name>
+        <Summary xml:lang="en">Development files for libzhuyin</Summary>
+        <Description xml:lang="en">The libzhuyin project aims to provide the algorithms core for intelligent sentence-based Chinese zhuyin input methods.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">libzhuyin</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="library">/usr/lib64/lib*.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/*.pc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2017-04-18</Date>
+            <Version>1.1.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Bryan T. Meyers</Name>
+            <Email>bmeyers@datadrake.com</Email>
+        </Update>
+    </History>
+</PISI>

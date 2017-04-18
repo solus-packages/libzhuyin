@@ -1,0 +1,20 @@
+name       : libzhuyin
+version    : 1.1.1
+release    : 1
+source     :
+    - https://github.com/libzhuyin/libzhuyin/archive/1.1.1.tar.gz : b321137c5fcfb32465f196631fcd931af5fd5a03660d1174e533c8227e23fe2e
+    - http://downloads.sourceforge.net/libzhuyin/models/model9.text.tar.gz : ea8eb5198931851d6e008e33e6dee9a1c22df38845123a71c8579b7929e62228
+license    : GPL-2.0
+component  : desktop.library
+summary    : Library to deal with zhuyin.
+description: |
+    The libzhuyin project aims to provide the algorithms core for intelligent sentence-based Chinese zhuyin input methods.
+builddeps  :
+    - gnome-common
+setup      : |
+    tar xvf $sources/model9.text.tar.gz -C ./data
+    %autogen --disable-static
+build      : |
+    %make
+install    : |
+    %make_install
